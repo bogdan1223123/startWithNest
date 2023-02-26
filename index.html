@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button id="demo" onclick="myFunction()">click</button>
+        <script>
+            function myFunction(){
+                document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+                fetch("http://localhost:3000/student", {
+                    method: 'POST', 
+                    headers:{"Content-Type":"application/json"}, 
+                    body:JSON.stringify({
+                        id: "5",
+                        name:"Иван",
+                        surName:"Иванов",
+                        math:"3",
+                        rus:"5",
+                    })})
+            }
+        </script>
+    </body>
+</html>
